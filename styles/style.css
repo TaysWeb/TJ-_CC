@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+::-webkit-scrollbar {
+    display: none;
+}
+header {
+    height: 50vh;
+    font-family: Arial,sa50ns-serif;
+}
+/* ------------------ NAVIGATION  ---------------*/
+nav {
+    height:11vh !important;
+}
+header .navbar .navbar-nav { 
+    padding:2rem 3rem 0 0;
+}
+ .navbar-brand img  { 
+    padding:  10rem 0 3rem 2rem  ;
+}
+header .navbar .nav-item  .nav-link {
+    display: inline-block;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 550;
+}
+/* ------------------END OF  NAVIGATION  ---------------*/
+.carousel {
+    position: absolute;
+    top:10.9%;
+    bottom: 70% ;
+    z-index: 0;
+}
+.Order {
+    position: relative;
+    z-index:-1;
+    top:10%;
+}
