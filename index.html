@@ -22,65 +22,89 @@
 <body>
 
     <!----------------- START OF LANDING --------------------->
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top" style="background:#CBAC8D;">
-          <div class="container-fluid">
+    <header id="landing">
+     <!-- Responsive menu -->      
+       <!-- MENU START  -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <!-- NAV CONTAINER START -->
+      <div class="container-fluid">
+        
+
+        <!-- NAV BUTTON  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- OFFCANVAS MAIN CONTAINER START -->
+        <section
+          class="offcanvas offcanvas-end"
+          id="offcanvasResponsive"
+          tabindex="-1"
+        >
+          <div class="offcanvas-header">
+           
             <button
-              class="navbar-toggler"
+              class="btn-close"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCenteredExample"
-              aria-controls="navbarCenteredExample"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center " id="navbarCenteredExample">
-                
-              <ul class="navbar-nav mb-2 mb-lg-2">
-                <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="#">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">PRODUCTS</a>
-                </li>
-               <li> <img src="https://i.postimg.cc/6Q14zm7z/EOMP-LOGO-Recovered.png"  alt="EOMP-LOGO-Recovered" width="110" class="navbar-brand"> </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ADMIN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">CONTACT</a>
-                </li>
-              </ul>
-              
-            </div>
-
-                <!-- Right elements -->
-                <div class="d-flex align-items-end  " >
-                    <!-- Icon -->
-                    <a class="link-secondary fs-2 m-3" href="#">
-                    <i class="fas fa-shopping-cart" style="color: #A5642E;"></i>
-                    </a>
-                </div>
-        </div>
-
-        </nav>
-        <!-- Navbar -->
+              aria-label="Close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <!-- OFF CANVAS MENU LINKS  START-->
+          <div
+            class="offcanvas-body d-flex flex-column justify-content-between px-0"
+          >
+            <ul class="navbar-nav fs-5 p-3 justify-content-evenly">
+              <li class="nav-item active p-3 py-md-1">
+                <a href="#landing" class="nav-link">HOME</a>
+              </li>
+              <li class="nav-item p-3 py-md-1">
+                <a href="./html/checkout.html" class="nav-link">PRODUCTS</a>
+              </li>
+              <li>
+                <img src="https://i.postimg.cc/6Q14zm7z/EOMP-LOGO-Recovered.png" alt="EOMP-LOGO-Recovered" width="130" class="navbar-brand">
+              </li>
+              </li>
+              <li class="nav-item p-3 py-md-1">
+                <a href="./html/admin.html" class="nav-link">ADMIN</a>
+              </li>
+              <li class="nav-item p-3 py-md-1">
+                <a href="#contactTJ" class="nav-link">CONTACT</a>
+              </li>
+           
+            
+                 <!-- Right elements -->
+                 <div class="d-flex align-items-end p-3 " >
+                  <!-- Icon -->
+                  <a class="link-secondary fs-1 m-3" href="#">
+                  <i class="fas fa-shopping-cart" style="color:#D97212;"></i>
+                  </a>
+              </div>
+            </ul>
+          </div>
+        </section>
+        <!-- OFFCANVAS MAIN CONTAINER END  -->
+      </div>
+    </nav>
+    <!--End of Responsive menu -->      
       
-        <!-- Background images -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <!-- Background images--->
+        <div id="banner" style="height: 100px">
+        <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner mb-2">
               <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://i.postimg.cc/sXp8kc1W/Banners-1-BIG-SCREEN.jpg" class="d-block  w-100"  alt="Banners-1-BIG-SCREEN">
-                <div class="me-3 ms-3"><button class="btn btn bg-black text-white rounded-2">ORDER NOW </button></div>
+                <img src="https://i.postimg.cc/sXp8kc1W/Banners-1-BIG-SCREEN.jpg" class=" mh-100 w-100"  alt="Banners-1-BIG-SCREEN">
+                 <!-- <div class="me-3 ms-3"><button class="btn btn bg-black text-white rounded-2">ORDER NOW </button></div>  -->
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://i.postimg.cc/HxfmXgLC/Banners-2-BIG-SCREEN.jpg" class="d-block  w-100" alt="Banners-2-BIG-SCREEN">
+                <img src="https://i.postimg.cc/HxfmXgLC/Banners-2-BIG-SCREEN.jpg" class=" mh-100 w-100" alt="Banners-2-BIG-SCREEN">
               </div>
               <div class="carousel-item">
-                <img src="https://i.postimg.cc/TwQm3t2m/Banners-3-BIG-SCREEN.jpg" class="d-block  w-100" alt="Banners-3-BIG-SCREEN">
+                <img src="https://i.postimg.cc/TwQm3t2m/Banners-3-BIG-SCREEN.jpg" class=" mh-100 w-100" alt="Banners-3-BIG-SCREEN">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -92,11 +116,38 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+
+        </div> 
         <!-- Background images -->
 
       </header>
      
      <!------------------ END OF LANDING --------------------------->
+
+     <section class=about-home id="aboutTJ">
+      <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <div class="about-title text-center">
+                <h3 class="fw-bold mb-5 fs-1 text-decoration-underline">Why Choose T J  </h3>
+            </div>
+        </div>
+      </div>
+     <div class="row">   
+      <div class="col-md-6">
+       <div class="circle">
+        <div class="img wrapper">
+         <img src="https://i.postimg.cc/wvZTYCDj/about.png"  alt="about" width="450">
+        </div>
+       </div>
+      </div>
+
+      <div class="col-md-6">
+      
+      </div>
+     </div>
+     </div>  <!--end of container-->
+     </section>
 
 
     
