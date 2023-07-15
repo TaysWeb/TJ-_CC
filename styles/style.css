@@ -41,17 +41,40 @@ header .navbar .nav-item  .nav-link {
     font-weight: 550;
 }
 /* ------------------END OF  NAVIGATION  ---------------*/
-.banner {
+/* .banner {
     height: 30rem ;
 }
 .carousel-item {
      margin-bottom: 60% !important;
       height:600px;
         
-}
+} */
+.landing {
+    height:105vh;
+     background-color:#CBAC8D !important;
+   } 
+   
+   .carousel {
+       margin-top: 122px;
+       height: 500px;
+       background-color:#CBAC8D !important; 
+     }
+     
+     .carousel-item,
+     .carousel-inner {
+       height: 100%;
+      
+     }
+     .carousel-inner img {
+       width: 100%;
+       height: auto ;
+     }
+     .carousel-item:active {
+         background-color:#CBAC8D !important; 
+     }
 
 /* ----------About section --------------------- */
-.about-title h3 {
+/* .about-title h3 {
     font-family:cursive;
     font-weight:300;font-style: italic;
 }
@@ -68,8 +91,124 @@ header .navbar .nav-item  .nav-link {
   transition-duration: .3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
   overflow: hidden;
+  } */
+  .about-home .row {
+    margin: 2.5rem;
   }
-@media (min-width:300px) and (max-width:990px){
-
+  .about-home .about-title h3 {
+      font-family:cursive;
+      font-weight:300;
+      font-style: italic;
+  }
+  
+    .about-home .circle p {
+      font-family: cursive;
+      line-height: 2;
+      letter-spacing: 4px;
+      font-style: italic;
+      font-weight:200;
+      margin-top:50px;
+    }
+    .about-home .circle .curve { 
+      width: 410px; height: 415px;
+      min-width: 150px;
+      float: left ;
+      margin-right:10rem;  
+      border-radius: 50%;
+      -webkit-shape-outside:circle();
+      shape-outside:circle();
+    } 
+   /* ====== MEDIA QuUERIES =====   */
+   @media (min-width:991px) and (max-width:1180px ) {
+ 
+    .landing {
+      height:90vh;
+    }
+      .carousel {
+           width: 100%;
+        }
+    .about-home {
+     margin-top:1.2rem;
+     height:95vh;
+    }
+      .about-home .row {
+     margin: 2.2rem;
+   }
+    .about-home .about-title h3 {
+       font-weight:260;
+   }
+   .about-home .circle p {
    
-}
+       font-weight:90;
+       margin-top:3%;
+     }
+     .about-home .circle .curve { 
+       width: 400px; height: 400px;
+       min-width: 40%;
+       margin-right:9rem;  
+      
+     } 
+   .about-home .row button {
+       margin-top:2%;
+   }
+   }
+     @media (min-width:312px) and (max-width:990px){
+    .landing {
+     width:100%;
+    }
+      .navbar .navbar-nav { 
+         padding:2rem 3rem 4rem 2rem;
+       }
+      .navbar .navbar-brand img  { 
+         padding:  12rem 2rem 5rem 4rem  ;
+       } 
+       .carousel {
+           height: 90%;
+           width:100%;
+        }
+         
+       .carousel-item,
+       .carousel-inner {
+           height: 100%;
+       }
+         
+       .carousel-inner img {
+           width: 100%;
+           height: auto ;
+       }
+      
+       .about-title h3 {
+         font-weight: 240;
+     }
+     .circle {
+       width: 250px;
+       height: 255px;
+       position: absolute;
+   
+       }
+      
+   }
+   @media (min-width:250px) and (max-width:311px){
+      
+     .landing{
+     height: 70vh;
+     
+     }
+     .carousel {
+       width:315px;
+     }
+   .carousel-inner img {
+     width: 100%;
+     height: auto ;
+   }
+   .about-title h3 {
+      margin-top: 250px;
+      font-weight: 160;
+   }
+   .circle {
+   width: 220px;
+   height: 225px;
+   margin: auto;
+   }
+   
+   }
