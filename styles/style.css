@@ -5,20 +5,25 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0;
+    background: scroll;
 } 
 ::-webkit-scrollbar {
     display: none;
 }
+ body {
+  overflow-x: hidden;
+} 
 header {
-    height: 97vh;
+    height: 105vh;
     font-family: Arial,sans-serif;
-}
+    background-color:#CBAC8D !important;
+} 
 
 /* ------------------ NAVIGATION  ---------------*/
 nav, .offcanvas {
   background-color:#CBAC8D !important;
 }
- .navbar {
+.navbar {
     height:8rem ;
 }
 .navbar-toggler {
@@ -27,13 +32,13 @@ nav, .offcanvas {
 .navbar-toggler:focus {
     outline: none;
 }
-header .navbar .navbar-nav { 
+ header .navbar .navbar-nav { 
     padding:2rem 3rem 0 0;
 }
 header .navbar .navbar-brand img  { 
     padding:  10rem 0 3rem 2rem  ;
 } 
-header .navbar .nav-item  .nav-link {
+ header .navbar .nav-item  .nav-link {
     display: inline-block;
     justify-content: space-between;
     padding: 30px;
@@ -41,35 +46,128 @@ header .navbar .nav-item  .nav-link {
     font-weight: 550;
 }
 /* ------------------END OF  NAVIGATION  ---------------*/
-.banner {
-    height: 30rem ;
+.carousel {
+    margin-top: 122px;
+    height: 500px;
+    background-color:#CBAC8D !important; 
+  }
+  
+  .carousel-item,
+  .carousel-inner {
+    height: 100%;
+   
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: auto ;
+  }
+  .carousel-item:active{
+      background-color:#CBAC8D !important; 
+  }
+ 
+/* --------------------  About section ----------------------------- */
+.about-home .row {
+  margin: 2.5rem;
 }
-.carousel-item {
-     margin-bottom: 60% !important;
-      height:600px;
-        
+.about-home .about-title h3 {
+    font-family:cursive;
+    font-weight:300;
+    font-style: italic;
 }
 
-/* ----------About section --------------------- */
-.about-title h3 {
-    font-family:cursive;
-    font-weight:300;font-style: italic;
-}
-.circle {
-    width: 500px;
-  height: 500px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(213, 210, 210);
-  border-radius: 500px;
-  cursor: pointer;
-  transition-duration: .3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
-  overflow: hidden;
+  .about-home .circle p {
+    font-family: cursive;
+    line-height: 2;
+    letter-spacing: 4px;
+    font-style: italic;
+    font-weight:200;
+    margin-top:50px;
   }
-@media (min-width:300px) and (max-width:990px){
+  .about-home .circle .curve { 
+    width: 410px; height: 415px;
+    min-width: 150px;
+    float: left ;
+    margin-right:10rem;  
+    border-radius: 50%;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+  } 
+  /* ------------------------- Menu Section  -------------------------*/
+  .menu {
+    height: auto;
+  }
+  .menu .row span {
+    width: 500px;
+    height: 500px;
+  }
+  .menu h5 {
+    line-height: 1.8;
+  }
+   /* ------------------------- More Info  -------------------------*/
+
+
+
+
 
    
+ 
+  /* ----------------------- MEDIA QUERIES ----------------------------- */
+@media (min-width:312px) and (max-width:990px){
+
+   
+    header .navbar .navbar-nav { 
+      padding:2rem 3rem 4rem 2rem;
+    }
+    header .navbar .navbar-brand img  { 
+      padding:  12rem 2rem 5rem 4rem  ;
+    } 
+    .carousel {
+        height: 300px;
+     }
+      
+    .carousel-item,
+    .carousel-inner {
+        height: 100%;
+    }
+      
+    .carousel-inner img {
+        width: 100%;
+        height: auto ;
+    }
+   
+    .about-title h3 {
+      font-weight: 240;
+  }
+  .circle {
+    width: 250px;
+    height: 255px;
+    position: absolute;
+
+    }
+   
 }
+@media (min-width:250px) and (max-width:311px){
+   
+  header{
+  height: 70vh;
+  }
+  .carousel {
+    width:315px;
+  }
+.carousel-inner img {
+  width: 100%;
+  height: auto ;
+}
+.about-title h3 {
+   margin-top: 250px;
+   font-weight: 160;
+}
+.circle {
+width: 220px;
+height: 225px;
+margin: auto;
+}
+
+}
+
+ /* ----------------------- END OF  MEDIA QUERIES ---------------------------- */
