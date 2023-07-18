@@ -10,6 +10,9 @@
 ::-webkit-scrollbar {
     display: none;
 }
+li {
+  list-style:none;
+  }
  body {
   overflow-x: hidden;
 } 
@@ -121,16 +124,25 @@ header .navbar .navbar-brand img  {
        background:#af8d74;
       }
          /* ------------------------- Contact  -------------------------*/
-   .cont-img {
+   /* .cont-img {
     border:2px solid black;
-    margin-bottom:-50% !important;
-   }
+    margin-bottom:50% !important;
+   } */
+   .contact{
+    height:104vh;
+  }
+  .contact-title h3 {
+   letter-spacing: 3px;
+   font-style:italic ;
+   font-size:30px;
+   font-weight: bolder;
+  } 
+  input {
+   height:55px;
+  }
 
-   <!----------------------- footer  -----------------------------*/>
-   footer {
-    background:#a87e58;
-   }
-
+   /*----------------------- footer  -----------------------------*/
+ 
 
 
   /* ----------------------- MEDIA QUERIES ----------------------------- */
