@@ -124,12 +124,12 @@ header .navbar .navbar-brand img  {
        background:#af8d74;
       }
          /* ------------------------- Contact  -------------------------*/
-   /* .cont-img {
-    border:2px solid black;
+   .cont-img {
+  
     margin-bottom:50% !important;
-   } */
+   }
    .contact{
-    height:104vh;
+    height:110vh;
   }
   .contact-title h3 {
    letter-spacing: 3px;
