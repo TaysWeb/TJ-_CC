@@ -33,7 +33,7 @@ header .navbar .navbar-nav {
       justify-content: space-between;
       padding: 30px;
       font-size: 20px;
-      font-weight: 550;
+      font-weight: 600;
   }
   @media (min-width:312px) and (max-width:990px){
  header .navbar .navbar-nav { 
@@ -52,6 +52,8 @@ button i {
 }
 button {
     font-style: italic ;
+    border: 3px solid black !important;
+    letter-spacing: 1.5 !important;
 }
 .card {
   box-shadow: -14px -13px 29px -5px rgba(255,255,255,0.75);
@@ -61,7 +63,7 @@ position: absolute;
 transform: translate(-50%, -50%);
 top: 50%;
 left: 50%;
-padding: 12px 10px;
+/* padding: 6px 8px; */
 }
 .card_load {
   background: linear-gradient( 120deg, #e5e5e5 30%, #f0f0f0 38% ,#f0f0f0 40%,  #e5e5e5 48%);
@@ -76,8 +78,7 @@ padding: 12px 10px;
 .card_load .row p{
   color:#a6947f !important;
     position: relative;
-    top:10%;
-    right:22%;
+    right:25%;
 
 }
 .card_load .row button {
@@ -92,13 +93,10 @@ padding: 12px 10px;
  }
  
  .card_load .row .default-btn,.hover-btn {
-  /* background-color: hsl(270, 4%, 10%); */
-
-  align-items: center;
-  gap: 15px;
-  padding: 10px 15px;
+  gap: 12px;
+  padding: 4px ;
   border-radius: 50px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
   transition: all .3s ease;
@@ -126,8 +124,16 @@ padding: 12px 10px;
  .card_load .row button:hover .hover-btn {
   transform: translate(0%,0%);
  }
-
-
+ .card_load .card_title_price {
+    position: relative;
+    right:50%;
+    
+}
+ .atc_btn button{
+  position: relative;
+  right:30%;
+  
+}
    
   
   

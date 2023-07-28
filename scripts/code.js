@@ -59,7 +59,7 @@ function CupsDisplay() {        //loop through products to display them individu
             const theCups = document.getElementById("cups")
             const elementProduct = document.createElement("div")
             elementProduct.innerHTML = `
-            <div class="card mb-4 rounded-4 gap-2 g-4"  style="max-width: 25rem; height:auto; background:#dec19f;">
+            <div class="card mb-4 rounded-4 gap-2 g-4 mb-2"  style="max-width: 25rem; height:auto; background:#dec19f;">
             <div class="card_title fs-4">${product.name}</div>
             <div class="card_load"  style="max-width: auto; height:16rem;">
              <div class="row  gap-4 text-center"  >
@@ -67,40 +67,72 @@ function CupsDisplay() {        //loop through products to display them individu
             <img src="${product.image_url}" alt="${product.name}" lazy="loading" width="110" height:"10rem" class="pt-3">
             </div>
             <div class="col" >
-            <p class="col-sm-12 text-break mt-5 text-center fs-5 fst-italic " >${product.desc}</p>
+            <p class="col-sm-12 text-break mt-5 text-center   fs-6 fw-semibold fs-italic " >${product.desc}</p>
+            <div class="atc_btn">
+                <a href="../html/checkout.html"><button class="btn btn-primary" >
+                     <div class="default-btn">
+                       <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
+                       <span>Add to Cart </span>
+                     </div>
+                     <div class="hover-btn">
+                       <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                       <span>Shop Now</span>
+                     </div>
+                   </button>
+                   </a> 
+               
+         
+                 <div class="card_title_price fs-3 fw-strong fst-italic fw-semibold mx-auto">R ${product.price}</div>
+                 </div>
             </div>
-            <div>
-            <button class="btn btn-primary ">
-                <div class="default-btn">
-                  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
-                  <span>Quick View</span>
-                </div>
-                <div class="hover-btn">
-                  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                  <span>Shop Now</span>
-                </div>
-              </button>
-            </div>
+        
         </div>
-            <div class="card_title_price fs-3">R ${product.price}</div>
-            </div>
+           </div>
         </div>
             `;
             theCups.appendChild(elementProduct);
     })
 
 }
-// const cart = []
+const cart = []
 
-// function AddToCart(productId) {
-//     const product = products.find((product) => product.id === productId);
+function AddToCart(productId) {
+    const product = products.find((product) => product.id === productId);
   
-//     if (product && product.quantity > 0) {
-//       cart.push(product);
-//       product.quantity--;
+    if (product && product.quantity > 0) {
+      cart.push(product);
+      product.quantity--;
      
-//       cartUpdate();
-//       console.log(cart);
-//     }  
-// }
+      cartUpdate();
+      console.log(cart);
+    }  
+}
 
+function cartUpdate(){
+    const cartContent = document.getElementById('cartContent');
+    cartContent.innerHTML = "";
+        cart.forEach((product, index) => {
+        const cartItem = document.createElement("div")
+        cartItem.innerHTML = `
+        <img src="${product.image}" alt="product image" class="img-thumbnail" lazy="loading" />
+        <p>${product.name} </p>
+        <div class="d-flex justify-content-between">
+          <p>R${product.price}</p>
+          <button class="modalButtonClose" onclick="cartDel(${index})">
+            Remove
+          </button>
+        </div>
+        `
+        cartContent.appendChild(cartItem)
+        cart.push(cartItem);
+        })
+        // cartItem.appendChild(cartItem)
+}
+
+function cartDel(index) {
+    // let todo = localStorage.getItem("todo");
+    // cart = JSON.parse(todo);
+    cart.pop(index, 1);
+    // localStorage.setItem("todo", JSON.stringify(cart));
+    cartUpdate();
+}
