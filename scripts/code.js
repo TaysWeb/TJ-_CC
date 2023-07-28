@@ -59,7 +59,7 @@ function CupsDisplay() {        //loop through products to display them individu
             const theCups = document.getElementById("cups")
             const elementProduct = document.createElement("div")
             elementProduct.innerHTML = `
-            <div class="card mb-4 rounded-4"  style="max-width: 25rem; height:auto; background:#dec19f;">
+            <div class="card mb-4 rounded-4 gap-2 g-4"  style="max-width: 25rem; height:auto; background:#dec19f;">
             <div class="card_title fs-4">${product.name}</div>
             <div class="card_load"  style="max-width: auto; height:16rem;">
              <div class="row  gap-4 text-center"  >
