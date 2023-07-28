@@ -59,18 +59,32 @@ function CupsDisplay() {        //loop through products to display them individu
             const theCups = document.getElementById("cups")
             const elementProduct = document.createElement("div")
             elementProduct.innerHTML = `
-            <div class="card">
-            <div class="card-img"><div class="img"></div></div>
-            <div class="card-title">Product title</div>
-            <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            <hr class="card-divider">
-            <div class="card-footer">
-                <div class="card-price"><span>$</span> 123.45</div>
-                <button class="card-btn">
-                  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
-                </button>
+            <div class="card mb-4 rounded-4"  style="max-width: 25rem; height:auto; background:#dec19f;">
+            <div class="card_title fs-4">${product.name}</div>
+            <div class="card_load"  style="max-width: auto; height:16rem;">
+             <div class="row  gap-4 text-center"  >
+             <div class="col-md-6">
+            <img src="${product.image_url}" alt="${product.name}" lazy="loading" width="110" height:"10rem" class="pt-3">
             </div>
+            <div class="col" >
+            <p class="col-sm-12 text-break mt-5 text-center fs-5 fst-italic " >${product.desc}</p>
             </div>
+            <div>
+            <button class="btn btn-primary ">
+                <div class="default-btn">
+                  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
+                  <span>Quick View</span>
+                </div>
+                <div class="hover-btn">
+                  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span>Shop Now</span>
+                </div>
+              </button>
+            </div>
+        </div>
+            <div class="card_title_price fs-3">R ${product.price}</div>
+            </div>
+        </div>
             `;
             theCups.appendChild(elementProduct);
     })
