@@ -80,7 +80,9 @@
                     <!-- Right elements -->
                     <div class="d-flex align-items-end p-3 " >
                      <!-- Icon -->
-                     <a class="link-secondary fs-1 m-3" href="#">
+                     <label id="cartNo">0</label>
+                     <a class="link-secondary fs-1 m-3" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   
                      <i class="fas fa-shopping-cart" style="color:#D97212;"></i>
                      </a>
                  </div>
@@ -123,6 +125,23 @@
         </div>
        </div>
     </section>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
              <!----------------------- start of footer ----------------------------->
              <footer class="text-center text-white" style=" background:#a87e58 ;">
