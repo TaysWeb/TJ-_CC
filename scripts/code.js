@@ -69,18 +69,24 @@ function CupsDisplay() {        //loop through products to display them individu
             <div class="col" >
             <p class="col-sm-12 text-break mt-5 text-center   fs-6 fw-semibold fs-italic " >${product.desc}</p>
             <div class="atc_btn">
-                <a href="../html/checkout.html"><button class="btn btn-primary" >
+                <button class="btn btn-primary" >
                      <div class="default-btn">
                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
-                       <span>Add to Cart </span>
+                       <span onclick="AddToCart(${product.id})">Add to Cart </span>
                      </div>
                      <div class="hover-btn">
                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                        <span>Shop Now</span>
                      </div>
                    </button>
+<<<<<<< HEAD
                    </a> 
           
+=======
+                
+               
+         
+>>>>>>> 86e1b82fdc671a800705f03f3275e44c1915f325
                  <div class="card_title_price fs-3 fw-strong fst-italic fw-semibold mx-auto">R ${product.price}</div>
                  </div>
             </div>
@@ -95,8 +101,12 @@ function CupsDisplay() {        //loop through products to display them individu
 }
 const cart = []
 
-function AddToCart(productId) {
-    const product = products.find((product) => product.id === productId);
+let addToCartButtons = document.getElementsByClassName('btn btn-primary')
+
+
+
+function AddToCart(products) {
+    const product = products.find((product) => products.id === productId);
   
     if (product && product.quantity > 0) {
       cart.push(product);
@@ -105,6 +115,10 @@ function AddToCart(productId) {
       cartUpdate();
       console.log(cart);
     }  
+}
+for(let i = 0; i < addToCartButtons.length; i++){
+    addToCartButtons[i].addEventListener('click', AddToCart())
+    
 }
 
 function cartUpdate(){
@@ -129,9 +143,9 @@ function cartUpdate(){
 }
 
 function cartDel(index) {
-    // let todo = localStorage.getItem("todo");
-    // cart = JSON.parse(todo);
+    let todo = localStorage.getItem("todo");
+    cart = JSON.parse(todo);
     cart.pop(index, 1);
-    // localStorage.setItem("todo", JSON.stringify(cart));
+    localStorage.setItem("todo", JSON.stringify(cart));
     cartUpdate();
 }
