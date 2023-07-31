@@ -80,8 +80,7 @@ function CupsDisplay() {        //loop through products to display them individu
                      </div>
                    </button>
                    </a> 
-               
-         
+          
                  <div class="card_title_price fs-3 fw-strong fst-italic fw-semibold mx-auto">R ${product.price}</div>
                  </div>
             </div>
