@@ -96,20 +96,13 @@ function CupsDisplay() {        //loop through products to display them individu
 }
 const cart = []
 
-let addToCartButtons = document.getElementsByClassName('btn btn-primary')
 
 
 
 function AddToCart(products) {
-    const product = products.find((product) => products.id === productId);
-  
-    if (product && product.quantity > 0) {
-      cart.push(product);
-      product.quantity--;
-     
-      cartUpdate();
-      console.log(cart);
-    }  
+   
+    let addToCartButtons = document.getElementsByClassName('btn btn-primary');
+ 
 }
 for(let i = 0; i < addToCartButtons.length; i++){
     addToCartButtons[i].addEventListener('click', AddToCart())
