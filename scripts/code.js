@@ -79,9 +79,14 @@ function CupsDisplay() {        //loop through products to display them individu
                        <span>Shop Now</span>
                      </div>
                    </button>
+<<<<<<< HEAD
+                   </a> 
+          
+=======
                 
                
          
+>>>>>>> 86e1b82fdc671a800705f03f3275e44c1915f325
                  <div class="card_title_price fs-3 fw-strong fst-italic fw-semibold mx-auto">R ${product.price}</div>
                  </div>
             </div>
