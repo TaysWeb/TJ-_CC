@@ -79,19 +79,11 @@
                
                     <!-- Right elements -->
                     <div class="d-flex align-items-end p-3 " >
-<<<<<<< HEAD
-          
-                     <a class="link-secondary fs-1 m-3">
-                      <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" >
-                     <i class="fas fa-shopping-cart "  style="color:#D97212;"></i>
-                    </button>
-=======
                      <!-- Icon -->
                      <label id="cartNo">0</label>
                      <a class="link-secondary fs-1 m-3" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                    
-                     <i class="fas fa-shopping-cart" style="color:#D97212;"></i>
->>>>>>> 86e1b82fdc671a800705f03f3275e44c1915f325
+                     <i class="fas fa-shopping-cart" id="cartBtn" style="color:#D97212;"></i>
                      </a>
                  </div>
                </ul>
@@ -123,8 +115,7 @@
       </div>
     </section>
      <!--  buttons -->
-
-     <section class="products py-5">
+ <section class="products py-5">
       <div class="container-fluid   text-center py-3">
        <div class="row row-cols-3 d-flex  m-2 g-3" id="cups" style="background: #dec19f;" >
           
@@ -133,23 +124,52 @@
         </div>
        </div>
     </section>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  
+     <!-- Modal -->
+        
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <h1 class="modal-title m-auto fs-5 text-decoration-underline" id="staticBackdropLabel">Your Cart</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+           <table class="table">
+             <thead>
+              <tr class="bg-dark-subtle">
+                <th scope="col"></th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Total</th> 
+                <th scope="col">Actions</th>
+              </tr>
+             </thead>
+             <tbody>
+               <td id="prodImg"></td>
+               <td id="prodPrice"></td>
+               <td id="prodQty"></td>
+               <td id="prodTotal"></td>
+             </tbody>
+           </table>
+
+           <div class="d-flex justify-content-center">
+            <h5>Total: <span class="price text-success">R</span></h5>
+            </div>
+
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <a href="./checkout.html">
+            <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal">Checkout</button>
+            </a>
+            <button type="button" class="btn btn-success border-0">Clear Cart</button>
           </div>
         </div>
       </div>
     </div>
+
+       
 
              <!----------------------- start of footer ----------------------------->
              <footer class="text-center text-white" style=" background:#a87e58 ;">
@@ -179,3 +199,7 @@
 
 </body>
 </html>
+
+
+
+
