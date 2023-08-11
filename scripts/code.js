@@ -97,6 +97,7 @@ function CupsDisplay() {        //loop through products to display them individu
     })
 
 }
+
 cart = [];
 function AddToCart(products) {
     for(let i = 0; i < addToCartButtons.length; i++){
@@ -112,6 +113,14 @@ function AddToCart(products) {
       cartUpdate();
       console.log(cart);
     }  
+
+const cart = []
+
+function AddToCart(products) {
+   
+    let addToCartButtons = document.getElementsByClassName('btn btn-primary');
+ 
+
 }
 
 
